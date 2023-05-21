@@ -1,7 +1,5 @@
 import React from 'react';
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
-import SettingsScreen from '../Pantallas/Configuración';
-import AboutScreen from '../Pantallas/AboutScreen';
 import Ionicons from 'react-native-vector-icons/Ionicons'
 import Inicio from './StackNavigation1';
 import Constants from 'expo-constants';

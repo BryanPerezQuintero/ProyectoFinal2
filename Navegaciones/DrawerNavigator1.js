@@ -5,12 +5,18 @@ import Inicio from './StackNavigation1';
 import Configuración from '../Pantallas/Configuración';
 import Acerca from '../Pantallas/Acerca';
 import Ionicons from 'react-native-vector-icons/Ionicons';
+import { Header } from '@rneui/themed';
 
 const Drawer = createDrawerNavigator();
 
 export default function DrawerNavigator1(){
     return(
-        <Drawer.Navigator
+        <View>
+            <Header
+                leftComponent={{ icon: 'menu', color: '#ffffff', onPress:()=>navigation.openDrawer() }}
+                centerComponent={{ text: 'Acerca', style: { color: '#ffffff' } }}
+            />
+            <Drawer.Navigator
             initialRouteName="Home"
             screenOptions={{
                 drawerStyle:{
@@ -67,7 +73,9 @@ export default function DrawerNavigator1(){
                     )
                 }}
             />
-
         </Drawer.Navigator>
+        
+        </View>
+        
     )
 }
